@@ -58,8 +58,19 @@ h2 {
 .navbar-child:hover {
   cursor: pointer;
   color: orange;
+  animation-name: cambio-tamaño;
+  animation-duration: 1s;
+  font-size: 19px;
 }
 
+@keyframes cambio-tamaño {
+    from {
+      font-size:17px;
+    }
+    to {
+      font-size: 19px;
+    }
+  }
 .cuerpo {
   width: 100%;
   display: flex;
