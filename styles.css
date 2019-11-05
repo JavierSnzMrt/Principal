@@ -2,8 +2,20 @@
   margin: 0px;
 }
 
+h1, h2, h3 {
+    font-family:"Montserrat";
+}
+p {
+    font-family: "Nunito";
+}
+
 .encabezado {
-  background-image: url(https://picsum.photos/id/350/1200/1200);
+  background: linear-gradient(
+      rgba(141, 153, 174, 0.8),
+      rgba(141, 153, 174, 0.5)
+    ),
+    url("https://picsum.photos/id/350/1200/1200") no-repeat fixed;
+  background-size: cover;
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -58,19 +70,21 @@ h2 {
 .navbar-child:hover {
   cursor: pointer;
   color: orange;
-  animation-name: cambio-tamaño;
+  animation-name: cambio-tamañoycolor;
   animation-duration: 1s;
   font-size: 19px;
 }
 
-@keyframes cambio-tamaño {
-    from {
-      font-size:17px;
-    }
-    to {
-      font-size: 19px;
-    }
+@keyframes cambio-tamañoycolor {
+  from {
+    font-size: 17px;
+    color: white;
   }
+  to {
+    font-size: 19px;
+    color: orange;
+  }
+}
 .cuerpo {
   width: 100%;
   display: flex;
@@ -87,6 +101,20 @@ h2 {
   border-radius: 20px;
   overflow: hidden;
   margin-top: 30px;
+}
+
+@media (max-width: 600px) and (min-width: 0px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+  }
+}
+
+@media (max-width: 400px) and (min-width: 0px) {
+  .tarjeta {
+    width: 250px;
+  }
 }
 
 .imagen-tarjeta {
