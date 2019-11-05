@@ -1,5 +1,5 @@
 * {
-    margin:0px
+  margin: 0px;
 }
 
 .encabezado {
@@ -9,75 +9,106 @@
   width: 100%;
   height: 400px;
   display: flex;
-  align-items:center;
-  justify-content:center;
-  color:white;
-}
-.navbar {
-    width:100%;
-    height:60px;
-    display:flex;
-    justify-content:space-around;
-    align-items: center;
-    background-color:darkorchid;
-    color:white;
+  align-items: center;
+  justify-content: center;
+  color: white;
 }
 
-.navbar-child {
-    cursor:pointer;
+h1 {
+  animation-name: deslizamiento-izquierda;
+  animation-duration: 2s;
+}
+
+h2 {
+  animation-name: deslizamiento-derecha;
+  animation-duration: 2s;
+}
+
+@keyframes deslizamiento-derecha {
+  from {
+    margin-left: -80px;
+    opacity: 0;
+  }
+  to {
+    margin-left: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes deslizamiento-izquierda {
+  from {
+    margin-right: -80px;
+    opacity: 0;
+  }
+  to {
+    margin-right: 0px;
+    opacity: 1;
+  }
+}
+.navbar {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: darkorchid;
+  color: white;
+}
+
+.navbar-child:hover {
+  cursor: pointer;
+  color: orange;
 }
 
 .cuerpo {
-    width:100%;
-    display:flex;
-    flex-wrap: wrap;
-    justify-content:space-around;
-    padding-top:40px;
-    padding-bottom:50px;
-
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 40px;
+  padding-bottom: 50px;
 }
 
 .tarjeta {
-    height:400px;
-    width:350px;
-    border: 1px solid lightgray;
-    border-radius:20px;
-    overflow:hidden;
-    margin-top:30px;
+  height: 400px;
+  width: 350px;
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 30px;
 }
 
 .imagen-tarjeta {
-    height:150px;
+  height: 150px;
 }
 
 .texto-tarjeta {
-    margin:20px;
+  margin: 20px;
 }
 
 .boton {
-    display:flex;
-    justify-content:flex-end;
-    align-items:flex-end;
-    margin-right:20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-right: 20px;
 }
 
 button {
-    background-color:darkcyan;
-    padding:8px;
-    border-radius:10px;
-    color:white;
-    outline:none;
-    border:none;
+  background-color: darkcyan;
+  padding: 8px;
+  border-radius: 10px;
+  color: white;
+  outline: none;
+  border: none;
 }
 
 footer {
-    width:100%;
-    height:200px;
-    background-color: darkslategray;
-    color:white;
-    display:flex;
-    align-items: center;
-    padding-left: 20px;
-    box-sizing: border-box;
-
+  width: 100%;
+  height: 200px;
+  background-color: darkslategray;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  box-sizing: border-box;
 }
